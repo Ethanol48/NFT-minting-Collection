@@ -356,23 +356,20 @@ export default function Home() {
       </Head>
       <div className={styles.main}>
         <div>
+          <img className={styles.image} src="./cryptodevs/0.svg" />
+        </div>
+        <div>
           <h1 className={styles.title}>Welcome to Crypto Devs!</h1>
           <div className={styles.description}>
-            It&#39;s an NFT collection for developers in Crypto.
+            NFT collection using previously a whitelist for <br></br> special minting priviledges.
           </div>
           <div className={styles.description}>
             {tokenIdsMinted}/20 have been minted
           </div>
           {renderButton()}
         </div>
-        <div>
-          <img className={styles.image} src="./cryptodevs/0.svg" />
-        </div>
       </div>
 
-      <footer className={styles.footer}>
-        Made with &#10084; by Crypto Devs
-      </footer>
     </div>
   );
 }
