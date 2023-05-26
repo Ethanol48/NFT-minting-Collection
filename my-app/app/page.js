@@ -254,7 +254,7 @@ export default function Home() {
       // Assign the Web3Modal class to the reference object by setting it's `current` value
       // The `current` value is persisted throughout as long as this page is open
       web3ModalRef.current = new Web3Modal({
-        network: "goerli",
+        network: "mumbai",
         providerOptions: {},
         disableInjectedProvider: false,
       });
@@ -289,6 +289,27 @@ export default function Home() {
   /*
       renderButton: Returns a button based on the state of the dapp
     */
+  
+  const renderNumberMinted = () => {
+    if (!walletConnected) {
+      return (
+      <div className={styles.description}>
+        connect you wallet to mumbai!! <br></br>(Polygon testnet)   
+      </div>
+      )
+    } else {
+      return (
+        <div className={styles.description}>
+          {tokenIdsMinted}/20 have been minted
+        </div>
+      )
+
+    }
+
+  }
+
+
+
   const renderButton = () => {
     // If wallet is not connected, return a button which allows them to connect their wallet
     if (!walletConnected) {
@@ -363,9 +384,7 @@ export default function Home() {
           <div className={styles.description}>
             NFT collection using previously a whitelist for <br></br> special minting priviledges.
           </div>
-          <div className={styles.description}>
-            {tokenIdsMinted}/20 have been minted
-          </div>
+          {renderNumberMinted()}
           {renderButton()}
         </div>
       </div>
