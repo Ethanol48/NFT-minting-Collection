@@ -390,7 +390,7 @@ export default function Home() {
       </div>
       <div style={{textAlign: "center"}}>
         <a className={styles.tag} href="https://ico-9l0r3n8ik-ethanol48.vercel.app" >
-          Mint NFT's to claim free Coins!!
+          Mint NFTs to claim free Coins!!
         </a>
       </div>
     </div>
